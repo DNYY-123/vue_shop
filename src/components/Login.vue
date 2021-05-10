@@ -16,7 +16,7 @@
           </el-input>
         </el-form-item>
         <el-form-item class="login_btn">
-          <el-button type="primary">提交</el-button>
+          <el-button type="primary" @click="$router.push('/test')">提交</el-button>
           <el-button :type="col" @click="clr">重置</el-button>
         </el-form-item>
       </el-form>
