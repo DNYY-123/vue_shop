@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../components/Login.vue'
-import Mean from '../components/Mean.vue'
+import Mean from '../components/demand-source.vue'
 import Test from '../components/index.vue'
 import Header from '@/components/Header'
 

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import {
   Button, Form, FormItem, Input, Dropdown, DropdownItem,
   DropdownMenu, Header, Row, Col, MenuItem, MenuItemGroup,
-  Submenu, Menu
+  Submenu, Menu, Select, DatePicker, Table, TableColumn
 }
   from 'element-ui'
 
@@ -20,3 +20,7 @@ Vue.use(MenuItem)
 Vue.use(MenuItemGroup)
 Vue.use(Submenu)
 Vue.use(Menu)
+Vue.use(Select)
+Vue.use(DatePicker)
+Vue.use(Table)
+Vue.use(TableColumn)
