@@ -2,7 +2,8 @@ import Vue from 'vue'
 import {
   Button, Form, FormItem, Input, Dropdown, DropdownItem,
   DropdownMenu, Header, Row, Col, MenuItem, MenuItemGroup,
-  Submenu, Menu, Select, DatePicker, Table, TableColumn
+  Submenu, Menu, Select, DatePicker, Table, TableColumn,
+  Radio, RadioGroup, Upload, Option
 }
   from 'element-ui'
 
@@ -24,3 +25,7 @@ Vue.use(Select)
 Vue.use(DatePicker)
 Vue.use(Table)
 Vue.use(TableColumn)
+Vue.use(Radio)
+Vue.use(RadioGroup)
+Vue.use(Upload)
+Vue.use(Option)

@@ -3,7 +3,7 @@
     <p>RNG</p>
     <div class="login_box">
       <div class="login_icon">
-        <img src="../assets/rng.png" alt="">
+        <img src="../assets/rng.png" alt="RNG">
       </div>
       <el-form label-width="0px" class="login_input">
         <el-form-item>
@@ -31,7 +31,7 @@ export default {
       username: '',
       password: '',
       see_pwd: 'password',
-      see_tab: true,
+      see_tab: false,
       col: 'info'
     }
   },

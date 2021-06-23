@@ -4,6 +4,9 @@ import router from './router'
 import './plugins/element.js'
 // 导入全局样式表
 import './assets/css/global.css'
+import * as echarts from 'echarts'
+import 'lib-flexible'
+Vue.prototype.$echarts = echarts
 
 Vue.config.productionTip = false
 

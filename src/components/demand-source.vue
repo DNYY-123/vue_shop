@@ -85,14 +85,17 @@
       v-model="demandRowSelection"
       @view="handlerView"
     />
+    <demand-source-detail />
   </div>
 </template>
 
 <script>
 import QueryList from './querylist'
+import DemandSourceDetail from './demand-source-detail'
 export default {
   components: {
-    QueryList
+    QueryList,
+    DemandSourceDetail
   },
   data () {
     return {
