@@ -3,7 +3,7 @@ import {
   Button, Form, FormItem, Input, Dropdown, DropdownItem,
   DropdownMenu, Header, Row, Col, MenuItem, MenuItemGroup,
   Submenu, Menu, Select, DatePicker, Table, TableColumn,
-  Radio, RadioGroup, Upload, Option
+  Radio, RadioGroup, Upload, Option, Dialog
 }
   from 'element-ui'
 
@@ -29,3 +29,4 @@ Vue.use(Radio)
 Vue.use(RadioGroup)
 Vue.use(Upload)
 Vue.use(Option)
+Vue.use(Dialog)

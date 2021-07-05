@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "value": 1,
+      "label": "EU"
+    },
+    {
+      "value": 2,
+      "label": "USA"
+    },
+    {
+      "value": 3,
+      "label": "JAN"
+    },
+    {
+      "value": 4,
+      "label": "URA"
+    },
+    {
+      "value": 5,
+      "label": "ENG"
+    },
+    {
+      "value": 6,
+      "label": "ITA"
+    },
+    {
+      "value": 7,
+      "label": "HAN"
+    }
+  ]
+}

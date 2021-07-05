@@ -1,0 +1,119 @@
+{
+  "data": [
+    {
+      "date": "2021-05-01 00:00:00",
+      "name": "FBA_FR_SZMQ",
+      "SKU": "62-01200-010",
+      "adress": "CNY",
+      "Month": "2021-03",
+      "chengben1": "56",
+      "chengben2": "37",
+      "MC": "81",
+      "userName": "janey.li@sunvalley.com.cn"
+    },
+    {
+      "date": "2021-05-01 00:00:00",
+      "name": "FBA_FR_SZMQ",
+      "SKU": "62-01200-010",
+      "adress": "CNY",
+      "Month": "2021-03",
+      "chengben1": "56",
+      "chengben2": "37",
+      "MC": "81",
+      "userName": "janey.li@sunvalley.com.cn"
+    },
+    {
+      "date": "2021-05-01 00:00:00",
+      "name": "FBA_FR_SZMQ",
+      "SKU": "62-01200-010",
+      "adress": "CNY",
+      "Month": "2021-03",
+      "chengben1": "56",
+      "chengben2": "37",
+      "MC": "81",
+      "userName": "janey.li@sunvalley.com.cn"
+    },
+    {
+      "date": "2021-05-01 00:00:00",
+      "name": "FBA_FR_SZMQ",
+      "SKU": "62-01200-010",
+      "adress": "CNY",
+      "Month": "2021-03",
+      "chengben1": "56",
+      "chengben2": "37",
+      "MC": "81",
+      "userName": "janey.li@sunvalley.com.cn"
+    },
+    {
+      "date": "2021-05-01 00:00:00",
+      "name": "FBA_FR_SZMQ",
+      "SKU": "62-01200-010",
+      "adress": "CNY",
+      "Month": "2021-03",
+      "chengben1": "56",
+      "chengben2": "37",
+      "MC": "81",
+      "userName": "janey.li@sunvalley.com.cn"
+    }
+  ],
+  "guojia": [
+    {
+      "value": 1,
+      "label": "EU"
+    },
+    {
+      "value": 2,
+      "label": "USA"
+    },
+    {
+      "value": 3,
+      "label": "JAN"
+    },
+    {
+      "value": 4,
+      "label": "URA"
+    },
+    {
+      "value": 5,
+      "label": "ENG"
+    },
+    {
+      "value": 6,
+      "label": "ITA"
+    },
+    {
+      "value": 7,
+      "label": "HAN"
+    }
+  ],
+  "erpSku": [
+    {
+      "value": 1,
+      "label": "62-01200-110"
+    },
+    {
+      "value": 2,
+      "label": "12-01530-010"
+    },
+    {
+      "value": 3,
+      "label": "92-01200-010"
+    },
+    {
+      "value": 4,
+      "label": "52-01200-010"
+    },
+    {
+      "value": 5,
+      "label": "62-09800-110"
+    },
+    {
+      "value": 6,
+      "label": "12-01200-980"
+    },
+    {
+      "value": 7,
+      "label": "62-00900-010"
+    }
+  ]
+}

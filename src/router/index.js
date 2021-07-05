@@ -8,6 +8,8 @@ import Qw from '../components/123'
 import Time from '../components/time'
 import Echart from '../components/echart'
 import Bar from '../components/echarts/bar'
+import Bi from '../components/bi'
+import Xls from '../components/test'
 
 Vue.use(VueRouter)
 
@@ -34,6 +36,14 @@ const router = new VueRouter({
     {
       path: '/bar',
       component: Bar
+    },
+    {
+      path: '/bi',
+      component: Bi
+    },
+    {
+      path: '/xl',
+      component: Xls
     }
   ]
 })

@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --open",
+    "dev": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
@@ -13,7 +13,8 @@
     "element-ui": "^2.4.5",
     "loader": "^2.1.1",
     "vue": "^2.6.11",
-    "vue-router": "^3.2.0"
+    "vue-router": "^3.2.0",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -36,6 +37,8 @@
     "sass": "^1.35.1",
     "sass-loader": "^8.0.2",
     "vue-cli-plugin-element": "^1.0.1",
-    "vue-template-compiler": "^2.6.11"
+    "vue-resource": "^1.5.3",
+    "vue-template-compiler": "^2.6.11",
+    "xlsx": "^0.17.0"
   }
 }
