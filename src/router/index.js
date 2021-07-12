@@ -1,15 +1,5 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Login from '../components/Login.vue'
-import Mean from '../components/demand-source.vue'
-import Test from '../components/index.vue'
-import Header from '@/components/Header'
-import Qw from '../components/123'
-import Time from '../components/time'
-import Echart from '../components/echart'
-import Bar from '../components/echarts/bar'
-import Bi from '../components/bi'
-import Xls from '../components/test'
 
 Vue.use(VueRouter)
 
@@ -22,43 +12,44 @@ const router = new VueRouter({
     },
     {
       path: '/login',
-      component: Login
+      component: () => import('../components/Login'),
+      meta: { title: 'login' }
     },
     {
       path: '/mean',
-      component: Mean
+      component: () => import('../components/demand-source')
     },
     {
       path: '/test',
-      component: Test
+      component: () => import('../components/index')
     },
     {
       path: '/2',
-      component: Header
+      component: () => import('../components/Header')
     },
     {
       path: '/q',
-      component: Qw
+      component: () => import('../components/123')
     },
     {
       path: '/time',
-      component: Time
+      component: () => import('../components/time')
     },
     {
       path: '/echart',
-      component: Echart
+      component: () => import('../components/echart')
     },
     {
       path: '/bar',
-      component: Bar
+      component: () => import('../components/echarts/bar')
     },
     {
       path: '/bi',
-      component: Bi
+      component: () => import('../components/bi')
     },
     {
       path: '/xl',
-      component: Xls
+      component: () => import('../components/test')
     }
   ]
 })
