@@ -16,7 +16,10 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   routes: [
     // 访问根路径，重定向到login
-    { path: '/', redirect: '/login' },
+    {
+      path: '/',
+      redirect: '/login'
+    },
     {
       path: '/login',
       component: Login
@@ -29,10 +32,22 @@ const router = new VueRouter({
       path: '/test',
       component: Test
     },
-    { path: '/2', component: Header },
-    { path: '/q', component: Qw },
-    { path: '/time', component: Time },
-    { path: '/echart', component: Echart },
+    {
+      path: '/2',
+      component: Header
+    },
+    {
+      path: '/q',
+      component: Qw
+    },
+    {
+      path: '/time',
+      component: Time
+    },
+    {
+      path: '/echart',
+      component: Echart
+    },
     {
       path: '/bar',
       component: Bar
