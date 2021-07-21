@@ -7635,6 +7635,11 @@
   "resolved" "https://registry.npm.taobao.org/requires-port/download/requires-port-1.0.0.tgz"
   "version" "1.0.0"
 
+"reset@^0.1.0":
+  "integrity" "sha1-n8cxQXGZWubLC35YsGznUir0uvs="
+  "resolved" "http://data-npm.sunvalley.com.cn:8081/repository/npm-repo-group/reset/-/reset-0.1.0.tgz"
+  "version" "0.1.0"
+
 "resize-observer-polyfill@^1.5.0":
   "integrity" "sha1-DpAg3T0hAkRY1OvSfiPkAmmBBGQ="
   "resolved" "https://registry.npm.taobao.org/resize-observer-polyfill/download/resize-observer-polyfill-1.5.1.tgz"

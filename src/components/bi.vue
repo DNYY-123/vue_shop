@@ -57,7 +57,7 @@
     </div>
     <div class="box">
       <div class="btns">
-        <el-button type="primary" size="mini">导入Excel</el-button>
+        <el-button type="primary" size="mini" @click="uploadFile()">导入Excel</el-button>
         <el-button type="primary" size="mini" @click="downloadFile(tableData)">下载报表</el-button>
       </div>
       <div class="table">
@@ -74,12 +74,12 @@
           <el-table-column
             prop="date"
             label="导入时间"
-            width="180">
+          >
           </el-table-column>
           <el-table-column
             prop="name"
             label="渠道"
-            width="180">
+          >
           </el-table-column>
           <el-table-column
             prop="SKU"
@@ -107,9 +107,22 @@
           </el-table-column>
           <el-table-column
             prop="userName"
-            label="操作人">
+            label="操作人"
+            width="200">
           </el-table-column>
         </el-table>
+      </div>
+      <div class="page p15">
+        <el-pagination
+          background
+          :page-sizes="[5, 10, 15, 20 ]"
+          :current-page="currentPage"
+          :page-size="pageSize"
+          :total="total"
+          layout="prev, pager, next, jumper, sizes, total"
+          @size-change="handleSizeChange"
+          @current-change="handleCurrentChange"
+        />
       </div>
     </div>
   </div>
@@ -117,6 +130,7 @@
 
 <script>
 import timeFormat from '@/tool/timeFormat'
+import onpage from '@/tool/page'
 var XLSX = require('xlsx')
 export default {
   data () {
@@ -127,6 +141,9 @@ export default {
       outFile: '',
       imFile: '',
       tableData: [],
+      pageSize: 10,
+      currentPage: 1,
+      total: 0,
       ruleForm: {
         startAndEndTime: '',
         channel: '',
@@ -153,14 +170,16 @@ export default {
     },
     readFile () {
       this.$http.get('data.json').then((res) => {
-        this.tableData = res.data.data
+        this.tableData = onpage(res.data.data, this.currentPage, this.pageSize)
+        this.total = this.tableData.length
         this.channelList = res.data.guojia
         this.skuList = res.data.erpSku
       }).catch((err) => {
         console.log('请求失败' + err)
       })
     },
-
+    handleSizeChange (newSize) {},
+    handleCurrentChange () {},
     downloadFile: function (rs) { // 点击导出按钮
       let data = [{}]
       for (const k in rs[0]) {
@@ -170,6 +189,7 @@ export default {
       this.downloadExl(data, 'MC数据')
     },
 
+    // 导入Excel表
     importFile: function () { // 导入excel
       const obj = this.imFile
       if (!obj.files) {
@@ -190,7 +210,7 @@ export default {
           })
         }
         const json = XLSX.utils.sheet_to_json($t.wb.Sheets[$t.wb.SheetNames[0]])
-        console.log(typeof json)
+        console.log(json)
         $t.dealFile($t.analyzeData(json)) // analyzeData: 解析导入数据
       }
       if (this.rABS) {
@@ -200,7 +220,27 @@ export default {
       }
     },
 
-    downloadExl: function (json, downName, type) { // 导出到excel
+    uploadFile: function () { // 点击导入按钮
+      this.imFile.click()
+    },
+
+    analyzeData: function (data) { // 此处可以解析导入数据
+      return data
+    },
+
+    dealFile: function (data) { // 处理导入的数据
+      console.log(data)
+      this.imFile.value = ''
+      if (data.length <= 0) {
+        this.errorDialog = true
+        this.errorMsg = '请导入正确信息'
+      } else {
+        this.tableData = onpage(data, this.currentPage, this.pageSize)
+      }
+    },
+
+    // 导出到Excel
+    downloadExl: function (json, downName, type) {
       const keyMap = [] // 获取键
       for (const k in json[0]) {
         keyMap.push(k)
@@ -275,6 +315,9 @@ export default {
     box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
     .btns {
       margin-bottom: 20px;
+    }
+    .page {
+      margin-top: 20px;
     }
   }
 }

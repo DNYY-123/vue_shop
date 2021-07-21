@@ -1,5 +1,5 @@
 <template>
-  <div class="index" v-loading.fullscreen.lock="fullscreenLoading" element-loading-text="拼命加载中...">
+  <div class="index">
     <input type="file" @change="importFile(this)" id="imFile" style="display: none"
            accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"/>
     <a id="downlink"></a>
@@ -13,7 +13,7 @@
         </span>
     </el-dialog>
     <!--展示导入信息-->
-    <el-table :data="excelData" tooltip-effect="dark">
+    <el-table :data="excelData" tooltip-effect="dark" v-loading="fullscreenLoading">
       <el-table-column label="名称" prop="name" show-overflow-tooltip></el-table-column>
       <el-table-column label="分量" prop="size" show-overflow-tooltip></el-table-column>
       <el-table-column label="口味" prop="taste" show-overflow-tooltip></el-table-column>
@@ -100,6 +100,7 @@ export default {
       data = data.concat(rs)
       this.downloadExl(data, '菜单')
     },
+
     importFile: function () { // 导入excel
       this.fullscreenLoading = true
       const obj = this.imFile
@@ -122,7 +123,7 @@ export default {
           })
         }
         const json = XLSX.utils.sheet_to_json($t.wb.Sheets[$t.wb.SheetNames[0]])
-        console.log(typeof json)
+        console.log(json)
         $t.dealFile($t.analyzeData(json)) // analyzeData: 解析导入数据
       }
       if (this.rABS) {
