@@ -24,10 +24,6 @@ const router = new VueRouter({
       component: () => import('../components/index')
     },
     {
-      path: '/2',
-      component: () => import('../components/Header')
-    },
-    {
       path: '/q',
       component: () => import('../components/123')
     },
@@ -50,6 +46,14 @@ const router = new VueRouter({
     {
       path: '/xl',
       component: () => import('../components/test')
+    },
+    {
+      path: '/dialog',
+      component: () => import('../views/dialog')
+    },
+    {
+      path: '/lubo',
+      component: () => import('../views/lubo')
     }
   ]
 })
